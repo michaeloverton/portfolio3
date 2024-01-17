@@ -1,0 +1,15 @@
+.hero-link {
+  /* background: #b1fc05; */
+  /* color: black; */
+}
+
+.hero-link:hover {
+  /* background: white; */
+  background: #b1fc05;
+  color: black;
+}
+
+.scroll-button:hover {
+  background: #b1fc05;
+  color: black;
+}
