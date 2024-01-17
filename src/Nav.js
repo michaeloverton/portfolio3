@@ -23,10 +23,10 @@ export default function GanekNav() {
         <Container>
           <Navbar.Brand
             as={Link}
-            to="/"
-            style={{fontSize: isMobile() ? 16 : 20}}
+            to="/home2"
+            style={{ fontSize: isMobile() ? 16 : 20 }}
           >
-            GANEK IMMERSIVE STUDIO
+            MICHAEL OVERTON BROWN
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -44,19 +44,6 @@ export default function GanekNav() {
                 }
               >
                 ABOUT
-              </Nav.Link>
-              <Nav.Link
-                as={Link}
-                to="/projects"
-                onMouseEnter={() => setHoverLink("projects")}
-                onMouseLeave={() => setHoverLink("")}
-                style={
-                  location.pathname === "/projects" || hoverLink == "projects"
-                    ? { background: "#b1fc05" }
-                    : {}
-                }
-              >
-                PROJECTS
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

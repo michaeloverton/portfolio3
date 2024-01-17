@@ -1,7 +1,56 @@
 .App {
-  font-family: 'Space Mono', sans-serif;
+  font-family: "Space Mono", sans-serif;
 }
 
 .darkened-image {
-  filter: brightness(.8);
+  filter: brightness(0.8);
+}
+
+.test {
+  /* background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 1),
+    rgb(255, 255, 255, 1) 20px,
+    rgba(0, 0, 0, 0) 20px,
+    rgba(0, 0, 0, 0) 40px
+  ); */
+  /* url(/public/images/projects/2023/phantoms/Michael-Overton-Brown-Embodiment1-9-Square.png); */
+}
+
+.test:hover {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 1),
+    rgb(255, 255, 255, 1) 20px,
+    rgba(0, 0, 0, 0) 20px,
+    rgba(0, 0, 0, 0) 40px
+  );
+  /* background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 1),
+    rgb(0, 0, 0, 1) 20px,
+    rgba(0, 0, 0, 0) 20px,
+    rgba(0, 0, 0, 0) 40px
+  ); */
+}
+
+
+
+/* https://stackoverflow.com/questions/1909648/stacking-divs-on-top-of-each-other */
+.outer {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  place-items: center;
+}
+.outer > * {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
+.outer .below {
+  z-index: 1;
+  background-color: aqua;
+}
+.outer .top {
+  z-index: 2;
+  background-color: brown;
 }

@@ -17,28 +17,10 @@ export default function Home() {
         <Row>
           <Col className="my-auto">
             <div style={{ fontSize: isMobile() ? "16px" : "25px" }}>
-              © GANEK IMMERSIVE STUDIO {new Date().getFullYear()}
-            </div>
-            <div
-              style={{
-                fontSize: isMobile() ? "11px" : "15px",
-                pointerEvents: "auto",
-              }}
-            >
-              Website by{" "}
-              <Highlight>
-                <a
-                  href="https://www.instagram.com/michaelovertonbrown"
-                  target="_blank"
-                  style={{ textDecoration: "none", color: "#b1fc05" }}
-                >
-                  Michael Overton Brown
-                </a>
-              </Highlight>
+              © MICHAEL OVERTON BROWN {new Date().getFullYear()}
             </div>
           </Col>
         </Row>
-        {/* <Row><Col>Privacy Policy | Terms of Service | Cookie Policy</Col></Row> */}
       </Container>
 
       <Container className="mt-4">.</Container>

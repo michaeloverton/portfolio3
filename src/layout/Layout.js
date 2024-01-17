@@ -70,7 +70,7 @@ export function AppWrapper(props) {
         left: 0,
         width: "100%",
         height: "100%",
-        pointerEvents: "none",
+        // pointerEvents: "none",
       }}
       className="App"
     >

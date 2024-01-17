@@ -9,6 +9,7 @@ import { Suspense } from "react";
 import TheyShall from "./projects/TheyShallNotComeBack";
 import PerfectCity from "./projects/PerfectCity";
 import WeBecomeSomethingElse from "./projects/WeBecomeSomethingElse";
+import Home2 from "./Home2";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,17 @@ const router = createBrowserRouter([
           <GlassFlower />
         </Suspense>
         <Home />
+      </div>
+    ),
+  },
+  {
+    path: "/home2",
+    element: (
+      <div style={{ height: "200vh" }}>
+        {/* <Suspense>
+          <GlassFlower />
+        </Suspense> */}
+        <Home2 />
       </div>
     ),
   },
