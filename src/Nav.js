@@ -24,7 +24,7 @@ export default function GanekNav() {
           <Navbar.Brand
             as={Link}
             to="/home2"
-            style={{ fontSize: isMobile() ? 16 : 20 }}
+            style={{ fontSize: isMobile() ? 16 : 25 }}
           >
             MICHAEL OVERTON BROWN
           </Navbar.Brand>

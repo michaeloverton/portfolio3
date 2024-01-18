@@ -9,6 +9,7 @@ import "./layout.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
+import "../App.css"
 
 export function ContentHeader(props) {
   const { isMobile } = useIsMobile();
@@ -54,7 +55,7 @@ export function Content(props) {
   return (
     <Container
       className="mx-auto"
-      style={{ width: isMobile() ? "100%" : "80%" }}
+      style={{ width: isMobile() ? "100%" : "90%" }}
     >
       {props.children}
     </Container>
@@ -457,6 +458,65 @@ export function ProjectPage(props) {
           <HorizontalBar className={isMobile() ? "my-3" : "my-5"} />
         ) : null}
       </Container>
+    </div>
+  );
+}
+
+export function ProjectBanner(props) {
+  const { isMobile } = useIsMobile();
+
+  return (
+    <div className="outer">
+      <Image
+        style={{
+          height: "300px",
+          width: "100%",
+          objectFit: "cover",
+        }}
+        src={props.imagePath}
+      />
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          color: "#b1fc05",
+          // fontSize: 25,
+          // overflow: "hidden",
+        }}
+        className="test p-3"
+      >
+        <Row >
+          <Col>
+            <span style={{ background: "black", fontSize: 25, }}>{props.title}</span>
+          </Col>
+        </Row>
+
+        {/* <Row>
+          <Col>
+            <span style={{ background: "black" }}>{props.details}</span>
+          </Col>
+        </Row> */}
+
+        <Row >
+          <Col className="fixed-bottom" >
+            <span style={{ background: "white", color: "black", border: "1px solid black" }}>INSTAGRAM | EMAIL</span>
+          </Col>
+        </Row>
+
+        {/* <div><span style={{ background: "black" }}>{props.title}</span></div>
+        <div><span style={{ background: "black" }}>{props.title}</span></div> */}
+      </div>
+      {/* <div
+        style={{
+          width: "100%",
+          height: "100%",
+          color: "#b1fc05",
+          // fontSize: 25,
+          // overflow: "hidden",
+        }}
+        className="test p-3 text-end"
+      >
+      </div> */}
     </div>
   );
 }

@@ -12,6 +12,7 @@ import {
   AppWrapper,
   HorizontalBar,
   HomeContentBlock,
+  ProjectBanner,
 } from "./layout/Layout";
 import { useRef, useState } from "react";
 import "./layout/layout.css";
@@ -30,194 +31,83 @@ export default function Home2() {
       <Content>
         <GanekNav />
 
-        <Container style={{ color: "white" }}>
-          {/* <Row>
-            <Col>
-              <div className="outer">
-                <Image
-                  style={{
-                    // height: "100%",
-                    // width: "500px",
-                    width: "100%",
-                    // objectFit: "cover",
-                    // position: "absolute",
-                  }}
-                  src="/images/projects/2023/phantoms/Michael-Overton-Brown-Embodiment1-Square.png"
-                />
-                <div
-                  style={{
-                    // position: "absolute",
-                    // height: "500px",
-                    width: "100%",
-                    height: "100%",
-                    color: "#b1fc05",
-                    fontSize: 70,
-                    overflow: "hidden"
-                  }}
-                  className="test p-3"
-                >
-                  We Become Something Else
-                </div>
-              </div>
-            </Col>
-            <Col>
-              <div className="outer">
-                <Image
-                  style={{
-                    // height: "100%",
-                    // width: "500px",
-                    width: "100%",
-                    objectFit: "cover",
-                    // position: "absolute",
-                  }}
-                  src="/images/projects/perfect-world/Perfect-World-Unity-Game-1.png"
-                />
-                <div
-                  style={{
-                    // position: "absolute",
-                    // height: "500px",
-                    width: "100%",
-                    height: "100%",
-                    color: "#b1fc05",
-                    fontSize: 70,
-                    overflow: "hidden"
-                  }}
-                  className="test p-3"
-                >
-                  Perfect World
-                </div>
-              </div>
-            </Col>
+        <Container style={{ color: "black" }}>
+          {/* <Row style={{ color: "black", fontSize: 25 }}>
+            <Col>MICHAEL OVERTON BROWN</Col>
           </Row> */}
 
-          <Row>
-            <Col>
-              <div className="outer">
-                <Image
-                  style={{
-                    height: "300px",
-                    // width: "500px",
-                    width: "100%",
-                    objectFit: "cover",
-                    // position: "absolute",
-                  }}
-                  src="/images/projects/2023/phantoms/Michael-Overton-Brown-Embodiment1-Square.png"
-                />
-                {/* <div
-                  style={{
-                    // position: "absolute",
-                    // height: "500px",
-                    width: "100%",
-                    height: "100%"
-                  }}
-                  className="test"
-                >
-                  &nbsp;
-                </div> */}
-                <div
-                  style={{
-                    // position: "absolute",
-                    // height: "500px",
-                    width: "100%",
-                    height: "100%",
-                    color: "#b1fc05",
-                    fontSize: 25,
-                    overflow: "hidden"
-                  }}
-                  className="test p-3"
-                >
-                  We Become Something Else
-                </div>
-              </div>
-            </Col>
+          <Row className="mb-3">
+            <Col>RECENT WORKS</Col>
           </Row>
+
           <Row>
-            <Col>
-              <div className="outer">
-                <Image
-                  style={{
-                    height: "300px",
-                    // width: "500px",
-                    width: "100%",
-                    objectFit: "cover",
-                    // position: "absolute",
-                  }}
-                  src="/images/projects/perfect-world/Perfect-World-Unity-Game-1.png"
-                />
-                {/* <div
-                  style={{
-                    // position: "absolute",
-                    // height: "500px",
-                    width: "100%",
-                    height: "100%"
-                  }}
-                  className="test"
-                >
-                  &nbsp;
-                </div> */}
-                <div
-                  style={{
-                    // position: "absolute",
-                    // height: "500px",
-                    width: "100%",
-                    height: "100%",
-                    color: "#b1fc05",
-                    fontSize: 25,
-                    overflow: "hidden"
-                  }}
-                  className="test p-3"
-                >
-                  <span style={{background: "black"}}>Perfect World</span>
-                </div>
-              </div>
-            </Col>
+            <Col lg={9}>
+              <Row>
+                <Col>
+                  <ProjectBanner
+                    title="We Become Something Else"
+                    imagePath="/images/projects/2023/phantoms/Michael-Overton-Brown-Embodiment1-Square.png"
+                    details="VR INTERACTIVE ANIMATION"
+                  />
+                </Col>
+              </Row>
+
+              <Row>
+                <Col>
+                  <ProjectBanner
+                    title="Perfect World"
+                    imagePath="/images/projects/perfect-world/Perfect-World-Unity-Game-1.png"
+                  />
+                </Col>
+              </Row>
+
+              <Row>
+                <Col>
+                  <ProjectBanner
+                    title="Metastasis"
+                    imagePath="/images/projects/metastasis/Metastasis-Unreal-Engine-Michael-Overton-Brown-1.png"
+                  />
+                </Col>
+              </Row>
+
+              <Row className="mb-3 mt-3">
+            <Col>OLDER WORKS</Col>
           </Row>
-          <Row>
+
+              <Row  className="gx-0">
+                <Col>
+                  <ProjectBanner
+                    title="cornhub.news"
+                    imagePath="/images/projects/cornhub/Cornhub-1.png"
+                  />
+                </Col>
+                <Col>
+                  <ProjectBanner
+                    title="Double Star"
+                    imagePath="/images/projects/double-star/Double-Star-Unreal-Engine.png"
+                  />
+                </Col>
+              </Row>
+            </Col>
+
             <Col>
-              <div className="outer">
-                <Image
-                  style={{
-                    height: "300px",
-                    // width: "500px",
-                    width: "100%",
-                    objectFit: "cover",
-                    // position: "absolute",
-                  }}
-                  src="/images/projects/metastasis/Metastasis-Unreal-Engine-Michael-Overton-Brown-1.png"
-                />
-                {/* <div
-                  style={{
-                    // position: "absolute",
-                    // height: "500px",
-                    width: "100%",
-                    height: "100%"
-                  }}
-                  className="test"
-                >
-                  &nbsp;
-                </div> */}
-                <div
-                  style={{
-                    // position: "absolute",
-                    // height: "500px",
-                    width: "100%",
-                    height: "100%",
-                    // color: "#b1fc05",
-                    color: "white",
-                    fontSize: 25,
-                    overflow: "hidden"
-                  }}
-                  className="test p-3"
-                >
-                  <span style={{background: "black"}}>Metastasis</span>
-                </div>
-              </div>
+              <Row style={{ color: "black", fontSize: 15 }} className="mb-4">
+                <Col>
+                  MICHAEL IS A NEW MEDIA ARTIST, TECHNOLOGIST, AND INTERACTION
+                  DESIGNER CURRENTLY PURSUING AN MFA IN INTERACTIVE MEDIA AT THE
+                  UNIVERSITY OF SOUTHERN CALIFORNIA.
+                </Col>
+              </Row>
+              <Row>
+                <Image src="/images/about/Michael-Overton-Brown.jpg" />
+              </Row>
             </Col>
           </Row>
         </Container>
+        <Footer />
       </Content>
 
-      <Footer />
+      
     </AppWrapper>
   );
 }

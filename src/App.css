@@ -25,16 +25,52 @@
     rgba(0, 0, 0, 0) 20px,
     rgba(0, 0, 0, 0) 40px
   );
-  /* background: repeating-linear-gradient(
+}
+
+/* .test:hover {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255),
+    rgb(0, 0, 0),
+  );
+} */
+
+.black-stripes {
+  background: repeating-linear-gradient(
     45deg,
     rgba(0, 0, 0, 1),
     rgb(0, 0, 0, 1) 20px,
     rgba(0, 0, 0, 0) 20px,
     rgba(0, 0, 0, 0) 40px
-  ); */
+  );
 }
 
+/* .test:hover {
+  animation-duration: 1s;
+  animation-name: slidein;
+}
 
+@keyframes slidein {
+  from {
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0),
+      rgb(255, 255, 255, 0) 20px,
+      rgba(0, 0, 0, 1) 20px,
+      rgba(0, 0, 0, 1) 40px
+    );
+  }
+
+  to {
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0),
+      rgb(0, 0, 0, 0) 20px,
+      rgba(255, 255, 255, 1) 20px,
+      rgba(255, 255, 255, 1) 40px
+    );
+  }
+} */
 
 /* https://stackoverflow.com/questions/1909648/stacking-divs-on-top-of-each-other */
 .outer {

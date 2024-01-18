@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <div>
       <Container
-        className="mt-5"
-        style={{ color: "white", borderTop: "solid" }}
+        className="mt-5 mb-5"
+        style={{ color: "black", borderTop: "solid" }}
       >
         <Row>
           <Col className="my-auto">
@@ -23,7 +23,7 @@ export default function Home() {
         </Row>
       </Container>
 
-      <Container className="mt-4">.</Container>
+      <Container className="mt-4">&nbsp;</Container>
     </div>
   );
 }
