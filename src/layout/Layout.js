@@ -479,7 +479,11 @@ export function ProjectBanner(props) {
           </Row>
 
           {props.details ? (
-            <Row className={true ? "mt-auto text-left" : "mt-auto text-left d-none"}>
+            <Row
+              className={
+                true ? "mt-auto text-left" : "mt-auto text-left d-none"
+              }
+            >
               <Col>
                 <span
                   className="px-2"
@@ -527,5 +531,28 @@ export function ProjectBanner(props) {
       </div> */}
       </div>
     </Link>
+  );
+}
+
+export function ModalImage(props) {
+  const { isMobile } = useIsMobile();
+  const [show, setShow] = useState(false);
+
+  return (
+    <div className={props.className} style={{ cursor: "pointer" }}>
+      <Image
+        onClick={() => setShow(true)}
+        style={{
+          height: "100%",
+          width: "100%",
+          objectFit: "cover",
+        }}
+        src={props.path}
+      />
+
+      <Modal size="xl" show={show} onHide={() => setShow(false)}>
+        <Image onClick={() => setShow(false)} src={props.path} />
+      </Modal>
+    </div>
   );
 }

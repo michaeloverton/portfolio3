@@ -28,6 +28,27 @@
   /* mix-blend-mode: saturation; */
 }
 
+.header-name {
+  color: black;
+}
+
+.header-name:hover {
+  background: black;
+  color: white;
+}
+
+/* .modal-open .modal {
+  overflow:scroll;
+} */
+
+.modal-open {
+  padding-right: 0 !important;
+  overflow-y: scroll !important;
+}
+/* html {
+  overflow-y: scroll !important;
+} */
+
 /* .test:hover {
   background: linear-gradient(
     45deg,

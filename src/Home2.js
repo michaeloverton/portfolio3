@@ -58,7 +58,7 @@ export default function Home2() {
                   <ProjectBanner
                     title="PERFECT WORLD"
                     imagePath="/images/projects/perfect-world/Perfect-World-Unity-Game-1.png"
-                    details="3D ART PLATFORMER GAME"
+                    details="3D PLATFORMER ARTGAME"
                   />
                 </Col>
               </Row>

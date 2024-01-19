@@ -10,19 +10,19 @@ import Home2 from "./Home2";
 import WeBecomeSomethingElse from "./projects/WeBecomeSomethingElse";
 
 const router = createBrowserRouter([
+  // {
+  //   path: "/",
+  //   element: (
+  //     <div style={{ height: "200vh" }}>
+  //       <Suspense>
+  //         <GlassFlower />
+  //       </Suspense>
+  //       <Home />
+  //     </div>
+  //   ),
+  // },
   {
     path: "/",
-    element: (
-      <div style={{ height: "200vh" }}>
-        <Suspense>
-          <GlassFlower />
-        </Suspense>
-        <Home />
-      </div>
-    ),
-  },
-  {
-    path: "/home2",
     element: (
       <div style={{ height: "200vh" }}>
         {/* <Suspense>

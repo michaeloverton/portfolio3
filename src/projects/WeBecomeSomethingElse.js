@@ -1,15 +1,25 @@
 import "../App.css";
 import GanekNav from "../Nav";
 import Footer from "../Footer";
-import { Content, AppWrapper, ProjectPage } from "../layout/Layout";
-import { useEffect } from "react";
+import { Content, AppWrapper, ProjectPage, ModalImage } from "../layout/Layout";
+import { useEffect, useState } from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import Header from "../Header";
-import { BlackDashedHighlight, BlackHighlight, BlackSolidHighlight, MidSize } from "../Utils";
+import { Modal, Button } from "react-bootstrap";
+import {
+  BlackDashedHighlight,
+  BlackHighlight,
+  BlackSolidHighlight,
+  MidSize,
+} from "../Utils";
 import { useIsMobile } from "../layout/MobileProvider";
 
 export default function WeBecomeSomethingElse() {
   const { isMobile } = useIsMobile();
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -23,7 +33,11 @@ export default function WeBecomeSomethingElse() {
 
           <Row>
             <Col>
-              <MidSize><BlackHighlight className="px-3">WE BECOME SOMETHING ELSE</BlackHighlight></MidSize>
+              <MidSize>
+                <BlackHighlight className="px-3">
+                  WE BECOME SOMETHING ELSE
+                </BlackHighlight>
+              </MidSize>
             </Col>
           </Row>
 
@@ -46,23 +60,30 @@ export default function WeBecomeSomethingElse() {
               <div style={{ border: "dashed", height: "100%" }} className="p-2">
                 <Row>
                   <Col>
-                    <BlackHighlight>DESCRIPTION:</BlackHighlight> Lorem ipsum lorem ipsum Lorem ipsum lorem ipsumLorem ipsum
-                    lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem
+                    <BlackHighlight>DESCRIPTION:</BlackHighlight> Lorem ipsum
+                    lorem ipsum Lorem ipsum lorem ipsumLorem ipsum lorem
                     ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem
                     ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem
                     ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem
-                    ipsum lorem ipsumLorem ipsum lorem ipsum
+                    ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem
+                    ipsumLorem ipsum lorem ipsum
                   </Col>
                 </Row>
-                <Row className="mt-3"><Col><BlackHighlight>TECHNOLOGY:</BlackHighlight> UNREAL ENGINE 5, HOUDINI, FMOD</Col></Row>
+                <Row className="mt-3">
+                  <Col>
+                    <BlackHighlight>TECHNOLOGY:</BlackHighlight> UNREAL ENGINE
+                    5, HOUDINI, FMOD
+                  </Col>
+                </Row>
               </div>
             </Col>
             <Col>
-              <Image
+              {/* <Image
                 style={{ objectFit: "cover" }}
                 width={"100%"}
                 src="/images/projects/2023/phantoms/Michael-Overton-Brown-Embodiment1-Square.png"
-              />
+              /> */}
+              <ModalImage path="/images/projects/2023/phantoms/Michael-Overton-Brown-Embodiment1-Square.png" />
             </Col>
           </Row>
 
@@ -97,6 +118,8 @@ export default function WeBecomeSomethingElse() {
               />
             </Col>
           </Row>
+
+          <ModalImage className="mt-3" path="/images/projects/2023/phantoms/Michael-Overton-Brown-Embodiment1-12.png" />
 
           {/* <ProjectPage
             title="EMBODIMENT I: We Become Something Else"
