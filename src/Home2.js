@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import GanekNav from "./Nav";
 import Footer from "./Footer";
-import { Highlight } from "./Utils";
+import { BlackHighlight, Highlight } from "./Utils";
 import Image from "react-bootstrap/Image";
 import { useIsMobile } from "./layout/MobileProvider";
 import {
@@ -16,6 +16,7 @@ import {
 } from "./layout/Layout";
 import { useRef, useState } from "react";
 import "./layout/layout.css";
+import Header from "./Header";
 
 export default function Home2() {
   const { isMobile, width } = useIsMobile();
@@ -29,25 +30,25 @@ export default function Home2() {
   return (
     <AppWrapper>
       <Content>
-        <GanekNav />
+        {/* <GanekNav /> */}
 
-        <Container style={{ color: "black" }}>
-          {/* <Row style={{ color: "black", fontSize: 25 }}>
-            <Col>MICHAEL OVERTON BROWN</Col>
-          </Row> */}
+        <Container>
+          <Header />
 
           <Row className="mb-3">
             <Col>RECENT WORKS</Col>
+            {/* <Col className="black-stripes" /> */}
           </Row>
 
           <Row>
-            <Col lg={9}>
+            <Col>
               <Row>
                 <Col>
                   <ProjectBanner
-                    title="We Become Something Else"
+                    title="WE BECOME SOMETHING ELSE"
                     imagePath="/images/projects/2023/phantoms/Michael-Overton-Brown-Embodiment1-Square.png"
                     details="VR INTERACTIVE ANIMATION"
+                    path="/we-become-something-else"
                   />
                 </Col>
               </Row>
@@ -55,8 +56,9 @@ export default function Home2() {
               <Row>
                 <Col>
                   <ProjectBanner
-                    title="Perfect World"
+                    title="PERFECT WORLD"
                     imagePath="/images/projects/perfect-world/Perfect-World-Unity-Game-1.png"
+                    details="3D ART PLATFORMER GAME"
                   />
                 </Col>
               </Row>
@@ -64,50 +66,64 @@ export default function Home2() {
               <Row>
                 <Col>
                   <ProjectBanner
-                    title="Metastasis"
+                    title="METASTASIS"
                     imagePath="/images/projects/metastasis/Metastasis-Unreal-Engine-Michael-Overton-Brown-1.png"
+                    details="3D ANIMATION"
                   />
                 </Col>
               </Row>
 
-              <Row className="mb-3 mt-3">
-            <Col>OLDER WORKS</Col>
-          </Row>
+              <Row className="mb-3">
+                <Col lg={3}>OLDER WORKS</Col>
+                {/* <Col className="black-stripes" /> */}
+              </Row>
 
-              <Row  className="gx-0">
+              <Row>
                 <Col>
                   <ProjectBanner
-                    title="cornhub.news"
+                    title="CORNHUB.NEWS"
                     imagePath="/images/projects/cornhub/Cornhub-1.png"
+                    details="ANTI-WEBSITE"
                   />
                 </Col>
                 <Col>
                   <ProjectBanner
-                    title="Double Star"
+                    title="DOUBLE STAR"
                     imagePath="/images/projects/double-star/Double-Star-Unreal-Engine.png"
+                    details="EXPERIMENTAL EXPLORATION GAME"
                   />
                 </Col>
+              </Row>
+
+              <Row>
+                <Col>
+                  <ProjectBanner
+                    title="SR388"
+                    imagePath="/images/projects/music/Michael-Overton-Brown-SR388.png"
+                    details="MUSIC"
+                  />
+                </Col>
+                <Col></Col>
               </Row>
             </Col>
 
-            <Col>
-              <Row style={{ color: "black", fontSize: 15 }} className="mb-4">
+            {/* <Col>
+              <Row
+                style={{ color: "black", border: "dashed" }}
+                className="mb-4 p-2"
+              >
                 <Col>
                   MICHAEL IS A NEW MEDIA ARTIST, TECHNOLOGIST, AND INTERACTION
                   DESIGNER CURRENTLY PURSUING AN MFA IN INTERACTIVE MEDIA AT THE
                   UNIVERSITY OF SOUTHERN CALIFORNIA.
                 </Col>
               </Row>
-              <Row>
-                <Image src="/images/about/Michael-Overton-Brown.jpg" />
-              </Row>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
+
         <Footer />
       </Content>
-
-      
     </AppWrapper>
   );
 }

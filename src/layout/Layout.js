@@ -9,7 +9,7 @@ import "./layout.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
-import "../App.css"
+import "../App.css";
 
 export function ContentHeader(props) {
   const { isMobile } = useIsMobile();
@@ -55,7 +55,7 @@ export function Content(props) {
   return (
     <Container
       className="mx-auto"
-      style={{ width: isMobile() ? "100%" : "90%" }}
+      style={{ width: isMobile() ? "100%" : "75%" }}
     >
       {props.children}
     </Container>
@@ -322,90 +322,75 @@ export function ProjectPage(props) {
 
   return (
     <div>
-      <Container
+      {/* <Container
         className={isMobile() ? "" : "px-4 pb-5"}
         style={{
           color: "white",
           pointerEvents: "auto",
         }}
-      >
-        <Row className={isMobile() ? "mb-4" : "mb-5"}>
-          <Col>
-            <Image
-              style={{
-                height: 300,
-                width: "100%",
-                objectFit: "cover",
-                pointerEvents: "auto",
-              }}
-              src={props.bannerPath}
-            />
-          </Col>
-        </Row>
-        <Row className="mb-2">
-          <Col>
-            <h1 style={{ color: "#b1fc05" }}>
-              <b>{props.title}</b>
-            </h1>
-          </Col>
-        </Row>
-        <Row className="mb-2">
-          <Col>
-            <h2>
-              <b>{props.creator}</b>
-            </h2>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <h4>
-              {props.tags
-                ? props.tags.map((tag) => (
-                    <span>
-                      <Highlight>{tag}</Highlight> |{" "}
-                    </span>
-                  ))
-                : null}
-            </h4>
-          </Col>
-        </Row>
+      > */}
+      <Row className={isMobile() ? "mb-4" : "mb-5"}>
+        <Col>
+          <Image
+            style={{
+              height: 300,
+              width: "100%",
+              objectFit: "cover",
+              pointerEvents: "auto",
+            }}
+            src={props.bannerPath}
+          />
+        </Col>
+      </Row>
+      <Row className="mb-2">
+        <Col>
+          <h1 style={{ color: "#b1fc05" }}>
+            <b>{props.title}</b>
+          </h1>
+        </Col>
+      </Row>
+      <Row className="mb-2">
+        <Col>
+          <h2>
+            <b>{props.creator}</b>
+          </h2>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <h4>
+            {props.tags
+              ? props.tags.map((tag) => (
+                  <span>
+                    <Highlight>{tag}</Highlight> |{" "}
+                  </span>
+                ))
+              : null}
+          </h4>
+        </Col>
+      </Row>
 
-        <HorizontalBar className={isMobile() ? "my-3" : "my-5"} />
+      <HorizontalBar className={isMobile() ? "my-3" : "my-5"} />
 
-        <Row>
-          <Col lg={6} className={isMobile() ? "mb-3" : ""}>
-            <h4 className={isMobile() ? "mt-3" : "mt-4"}>
-              <Row>
-                <Col>{props.children}</Col>
-              </Row>
-            </h4>
-          </Col>
-          <Col>
-            <Image
-              style={{ objectFit: "cover" }}
-              width={"100%"}
-              src={props.descriptionImagePath}
-            />
-          </Col>
-        </Row>
+      <Row>
+        <Col lg={6} className={isMobile() ? "mb-3" : ""}>
+          <h4 className={isMobile() ? "mt-3" : "mt-4"}>
+            <Row>
+              <Col>{props.children}</Col>
+            </Row>
+          </h4>
+        </Col>
+        <Col>
+          <Image
+            style={{ objectFit: "cover" }}
+            width={"100%"}
+            src={props.descriptionImagePath}
+          />
+        </Col>
+      </Row>
 
-        {props.primaryImagePaths.map((imagePath) => (
-          <Row className={isMobile() ? "mt-3" : "mt-5"}>
-            <Col>
-              <Image
-                style={{
-                  height: "100%",
-                  width: "100%",
-                  objectFit: "cover",
-                  pointerEvents: "auto",
-                }}
-                src={imagePath}
-              />
-            </Col>
-          </Row>
-        ))}
-
-        {/* <Row className={isMobile() ? "mt-3" : "mt-5"}>
+      {props.primaryImagePaths.map((imagePath) => (
+        <Row className={isMobile() ? "mt-3" : "mt-5"}>
           <Col>
             <Image
               style={{
@@ -414,99 +399,122 @@ export function ProjectPage(props) {
                 objectFit: "cover",
                 pointerEvents: "auto",
               }}
-              src={props.primaryImagePath}
+              src={imagePath}
             />
           </Col>
         </Row>
-        {props.secondPrimaryImagePath ? (
-          <Row className={isMobile() ? "mt-3" : "mt-5"}>
-            <Col>
-              <Image
-                style={{
-                  height: "100%",
-                  width: "100%",
-                  objectFit: "cover",
-                  pointerEvents: "auto",
-                }}
-                src={props.secondPrimaryImagePath}
-              />
-            </Col>
-          </Row>
-        ) : null} */}
+      ))}
 
+      <HorizontalBar className={isMobile() ? "my-3" : "my-5"} />
+
+      <Row className={isMobile() ? "mt-3" : "mt-5"}>
+        {props.subImagePaths
+          ? props.subImagePaths.map((imagePath) => (
+              <Col>
+                <Image
+                  style={{
+                    height: "100%",
+                    width: "100%",
+                    objectFit: "cover",
+                    pointerEvents: "auto",
+                  }}
+                  src={imagePath}
+                />
+              </Col>
+            ))
+          : null}
+      </Row>
+
+      {props.subImagePaths ? (
         <HorizontalBar className={isMobile() ? "my-3" : "my-5"} />
-
-        <Row className={isMobile() ? "mt-3" : "mt-5"}>
-          {props.subImagePaths
-            ? props.subImagePaths.map((imagePath) => (
-                <Col>
-                  <Image
-                    style={{
-                      height: "100%",
-                      width: "100%",
-                      objectFit: "cover",
-                      pointerEvents: "auto",
-                    }}
-                    src={imagePath}
-                  />
-                </Col>
-              ))
-            : null}
-        </Row>
-
-        {props.subImagePaths ? (
-          <HorizontalBar className={isMobile() ? "my-3" : "my-5"} />
-        ) : null}
-      </Container>
+      ) : null}
+      {/* </Container> */}
     </div>
   );
 }
 
 export function ProjectBanner(props) {
+  const [hover, setHover] = useState(false);
   const { isMobile } = useIsMobile();
 
   return (
-    <div className="outer">
-      <Image
-        style={{
-          height: "300px",
-          width: "100%",
-          objectFit: "cover",
-        }}
-        src={props.imagePath}
-      />
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          color: "#b1fc05",
-          // fontSize: 25,
-          // overflow: "hidden",
-        }}
-        className="test p-3"
-      >
-        <Row >
-          <Col>
-            <span style={{ background: "black", fontSize: 25, }}>{props.title}</span>
-          </Col>
-        </Row>
+    <Link to={props.path} style={{ textDecoration: "none" }}>
+      <div className="outer mb-3" style={{ cursor: "pointer" }}>
+        <Image
+          style={{
+            height: isMobile() ? "200px" : "300px",
+            width: "100%",
+            objectFit: "cover",
+          }}
+          src={props.imagePath}
+        />
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+            // color: "#b1fc05",
+            // color: "white",
+            // fontSize: 25,
+            // overflow: "hidden",
+          }}
+          className="test p-3 d-flex flex-column"
+          // onMouseEnter={() => setHover(true)}
+          // onMouseLeave={() => setHover(false)}
+        >
+          <Row>
+            <Col>
+              <span
+                className="px-2"
+                style={{
+                  background: "black",
+                  fontSize: 20,
+                  border: "solid white",
+                  color: "white",
+                  // color: "#b1fc05"
+                }}
+              >
+                {props.title}
+              </span>
+            </Col>
+          </Row>
 
-        {/* <Row>
-          <Col>
-            <span style={{ background: "black" }}>{props.details}</span>
-          </Col>
-        </Row> */}
+          {props.details ? (
+            <Row className={true ? "mt-auto text-left" : "mt-auto text-left d-none"}>
+              <Col>
+                <span
+                  className="px-2"
+                  style={{
+                    background: "black",
+                    // fontSize: 15,
+                    border: "solid white",
+                    color: "white",
+                    // color: "#b1fc05"
+                  }}
+                >
+                  {props.details}
+                </span>
+              </Col>
+            </Row>
+          ) : null}
 
-        <Row >
-          <Col className="fixed-bottom" >
-            <span style={{ background: "white", color: "black", border: "1px solid black" }}>INSTAGRAM | EMAIL</span>
-          </Col>
-        </Row>
+          {/* <Row>
+            <Col className="fixed-bottom">
+              <span
+                style={{
+                  background: "white",
+                  color: "black",
+                  border: "1px solid black",
+                }}
+              >
+                INSTAGRAM | EMAIL
+              </span>
+            </Col>
+          </Row> */}
 
-        {/* <div><span style={{ background: "black" }}>{props.title}</span></div>
+          {/* <div><span style={{ background: "black" }}>{props.title}</span></div>
         <div><span style={{ background: "black" }}>{props.title}</span></div> */}
-      </div>
-      {/* <div
+        </div>
+        {/* <div
         style={{
           width: "100%",
           height: "100%",
@@ -517,6 +525,7 @@ export function ProjectBanner(props) {
         className="test p-3 text-end"
       >
       </div> */}
-    </div>
+      </div>
+    </Link>
   );
 }

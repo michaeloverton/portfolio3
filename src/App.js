@@ -6,10 +6,8 @@ import About from "./About";
 import Projects from "./Projects";
 import { MobileProvider } from "./layout/MobileProvider";
 import { Suspense } from "react";
-import TheyShall from "./projects/TheyShallNotComeBack";
-import PerfectCity from "./projects/PerfectCity";
-import WeBecomeSomethingElse from "./projects/WeBecomeSomethingElse";
 import Home2 from "./Home2";
+import WeBecomeSomethingElse from "./projects/WeBecomeSomethingElse";
 
 const router = createBrowserRouter([
   {
@@ -46,45 +44,12 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/projects",
+    path: "/we-become-something-else",
     element: (
       <div style={{ height: "200vh" }}>
-        <Suspense>
+        {/* <Suspense>
           <GlassFlower />
-        </Suspense>
-        <Projects />
-      </div>
-    ),
-  },
-  {
-    path: "/projects/they-shall-not-come-back-virtual-reality",
-    element: (
-      <div style={{ height: "200vh" }}>
-        <Suspense>
-          <GlassFlower />
-        </Suspense>
-        <TheyShall />
-      </div>
-    ),
-  },
-  {
-    path: "/projects/perfect-city-unreal-engine",
-    element: (
-      <div style={{ height: "200vh" }}>
-        <Suspense>
-          <GlassFlower />
-        </Suspense>
-        <PerfectCity />
-      </div>
-    ),
-  },
-  {
-    path: "/projects/we-become-something-else-unreal-engine",
-    element: (
-      <div style={{ height: "200vh" }}>
-        <Suspense>
-          <GlassFlower />
-        </Suspense>
+        </Suspense> */}
         <WeBecomeSomethingElse />
       </div>
     ),
