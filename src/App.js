@@ -1,13 +1,12 @@
 import "./App.css";
 import GlassFlower from "./three/GlassFlower";
 import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
-import Home from "./Home";
 import About from "./About";
-import Projects from "./Projects";
 import { MobileProvider } from "./layout/MobileProvider";
 import { Suspense } from "react";
 import Home2 from "./Home2";
 import WeBecomeSomethingElse from "./projects/WeBecomeSomethingElse";
+import PerfectWorld from "./projects/PerfectWorld";
 
 const router = createBrowserRouter([
   // {
@@ -36,9 +35,9 @@ const router = createBrowserRouter([
     path: "/about",
     element: (
       <div style={{ height: "200vh" }}>
-        <Suspense>
+        {/* <Suspense>
           <GlassFlower />
-        </Suspense>
+        </Suspense> */}
         <About />
       </div>
     ),
@@ -51,6 +50,17 @@ const router = createBrowserRouter([
           <GlassFlower />
         </Suspense> */}
         <WeBecomeSomethingElse />
+      </div>
+    ),
+  },
+  {
+    path: "/perfect-world",
+    element: (
+      <div style={{ height: "200vh" }}>
+        {/* <Suspense>
+          <GlassFlower />
+        </Suspense> */}
+        <PerfectWorld />
       </div>
     ),
   },

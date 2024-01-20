@@ -10,6 +10,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
 import "../App.css";
+import { MidSize, BlackHighlight } from "../Utils";
 
 export function ContentHeader(props) {
   const { isMobile } = useIsMobile();
@@ -322,113 +323,61 @@ export function ProjectPage(props) {
 
   return (
     <div>
-      {/* <Container
-        className={isMobile() ? "" : "px-4 pb-5"}
-        style={{
-          color: "white",
-          pointerEvents: "auto",
-        }}
-      > */}
-      <Row className={isMobile() ? "mb-4" : "mb-5"}>
-        <Col>
-          <Image
-            style={{
-              height: 300,
-              width: "100%",
-              objectFit: "cover",
-              pointerEvents: "auto",
-            }}
-            src={props.bannerPath}
-          />
-        </Col>
-      </Row>
-      <Row className="mb-2">
-        <Col>
-          <h1 style={{ color: "#b1fc05" }}>
-            <b>{props.title}</b>
-          </h1>
-        </Col>
-      </Row>
-      <Row className="mb-2">
-        <Col>
-          <h2>
-            <b>{props.creator}</b>
-          </h2>
-        </Col>
-      </Row>
       <Row>
         <Col>
-          <h4>
-            {props.tags
-              ? props.tags.map((tag) => (
-                  <span>
-                    <Highlight>{tag}</Highlight> |{" "}
-                  </span>
-                ))
-              : null}
-          </h4>
+          <MidSize>
+            <BlackHighlight className="px-3">{props.title}</BlackHighlight>
+          </MidSize>
+        </Col>
+        {props.year && !isMobile() ? (
+          <Col className="text-end">
+            <MidSize>
+              <BlackHighlight className="px-3">{props.year}</BlackHighlight>
+            </MidSize>
+          </Col>
+        ) : null}
+      </Row>
+
+      <Row>
+        <Col>
+          <ModalImage height="300px" path={props.bannerPath} />
         </Col>
       </Row>
 
-      <HorizontalBar className={isMobile() ? "my-3" : "my-5"} />
-
-      <Row>
-        <Col lg={6} className={isMobile() ? "mb-3" : ""}>
-          <h4 className={isMobile() ? "mt-3" : "mt-4"}>
+      <Row className={isMobile() ? "mt-2" : "mt-3"}>
+        <Col lg={6} className={isMobile() ? "mb-2" : ""}>
+          <div style={{ border: "dashed", height: "100%" }} className="p-2">
             <Row>
-              <Col>{props.children}</Col>
+              <Col>
+                <BlackHighlight>DESCRIPTION:</BlackHighlight> {props.children}
+              </Col>
             </Row>
-          </h4>
+            <Row className="mt-3">
+              <Col>
+                <BlackHighlight>TECHNOLOGY:</BlackHighlight> {props.technology}
+              </Col>
+            </Row>
+          </div>
         </Col>
+
         <Col>
-          <Image
-            style={{ objectFit: "cover" }}
-            width={"100%"}
-            src={props.descriptionImagePath}
-          />
+          <ModalImage path={props.descriptionImagePath} />
+        </Col>
+      </Row>
+
+      <Row className={isMobile() ? "mt-2" : "mt-3"}>
+        <Col>
+          <YoutubeVideo url={props.youtubeEmbedUrl} title={props.title} />
         </Col>
       </Row>
 
       {props.primaryImagePaths.map((imagePath) => (
-        <Row className={isMobile() ? "mt-3" : "mt-5"}>
+        <Row className={isMobile() ? "mt-2" : "mt-3"}>
           <Col>
-            <Image
-              style={{
-                height: "100%",
-                width: "100%",
-                objectFit: "cover",
-                pointerEvents: "auto",
-              }}
-              src={imagePath}
-            />
+            <ModalImage path={imagePath} />
           </Col>
         </Row>
       ))}
-
-      <HorizontalBar className={isMobile() ? "my-3" : "my-5"} />
-
-      <Row className={isMobile() ? "mt-3" : "mt-5"}>
-        {props.subImagePaths
-          ? props.subImagePaths.map((imagePath) => (
-              <Col>
-                <Image
-                  style={{
-                    height: "100%",
-                    width: "100%",
-                    objectFit: "cover",
-                    pointerEvents: "auto",
-                  }}
-                  src={imagePath}
-                />
-              </Col>
-            ))
-          : null}
-      </Row>
-
-      {props.subImagePaths ? (
-        <HorizontalBar className={isMobile() ? "my-3" : "my-5"} />
-      ) : null}
-      {/* </Container> */}
     </div>
   );
 }
@@ -438,8 +387,12 @@ export function ProjectBanner(props) {
   const { isMobile } = useIsMobile();
 
   return (
-    <Link to={props.path} style={{ textDecoration: "none" }}>
-      <div className="outer mb-3" style={{ cursor: "pointer" }}>
+    <Link
+      to={props.path}
+      target={props.external ? "_blank" : ""}
+      style={{ textDecoration: "none" }}
+    >
+      <div className={"outer mb-3"} style={{ cursor: "pointer" }}>
         <Image
           style={{
             height: isMobile() ? "200px" : "300px",
@@ -452,14 +405,8 @@ export function ProjectBanner(props) {
           style={{
             width: "100%",
             height: "100%",
-            // color: "#b1fc05",
-            // color: "white",
-            // fontSize: 25,
-            // overflow: "hidden",
           }}
-          className="test p-3 d-flex flex-column"
-          // onMouseEnter={() => setHover(true)}
-          // onMouseLeave={() => setHover(false)}
+          className={"test p-3 d-flex flex-column"}
         >
           <Row>
             <Col>
@@ -467,7 +414,7 @@ export function ProjectBanner(props) {
                 className="px-2"
                 style={{
                   background: "black",
-                  fontSize: 20,
+                  fontSize: !isMobile() ? 20 : "1rem",
                   border: "solid white",
                   color: "white",
                   // color: "#b1fc05"
@@ -489,7 +436,7 @@ export function ProjectBanner(props) {
                   className="px-2"
                   style={{
                     background: "black",
-                    // fontSize: 15,
+                    fontSize: !isMobile() ? "1rem" : "0.8rem",
                     border: "solid white",
                     color: "white",
                     // color: "#b1fc05"
@@ -500,35 +447,7 @@ export function ProjectBanner(props) {
               </Col>
             </Row>
           ) : null}
-
-          {/* <Row>
-            <Col className="fixed-bottom">
-              <span
-                style={{
-                  background: "white",
-                  color: "black",
-                  border: "1px solid black",
-                }}
-              >
-                INSTAGRAM | EMAIL
-              </span>
-            </Col>
-          </Row> */}
-
-          {/* <div><span style={{ background: "black" }}>{props.title}</span></div>
-        <div><span style={{ background: "black" }}>{props.title}</span></div> */}
         </div>
-        {/* <div
-        style={{
-          width: "100%",
-          height: "100%",
-          color: "#b1fc05",
-          // fontSize: 25,
-          // overflow: "hidden",
-        }}
-        className="test p-3 text-end"
-      >
-      </div> */}
       </div>
     </Link>
   );
@@ -543,16 +462,48 @@ export function ModalImage(props) {
       <Image
         onClick={() => setShow(true)}
         style={{
-          height: "100%",
+          height: props.height ? props.height : "100%",
           width: "100%",
           objectFit: "cover",
         }}
         src={props.path}
       />
 
-      <Modal size="xl" show={show} onHide={() => setShow(false)}>
+      <Modal
+        centered
+        size={props.size ? props.size : "xl"}
+        show={show}
+        onHide={() => setShow(false)}
+      >
         <Image onClick={() => setShow(false)} src={props.path} />
       </Modal>
     </div>
+  );
+}
+
+export function YoutubeVideo(props) {
+  const { isMobile } = useIsMobile();
+
+  return (
+    // <Row>
+    //   <Col style={{ margin: 0, padding: isMobile() ? "" : 0 }}>
+    <iframe
+      width="100%"
+      height={isMobile() ? 250 : 500}
+      src={props.url}
+      title={props.title}
+      allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    ></iframe>
+    //   </Col>
+    // </Row>
+    // <iframe
+    //   width="560"
+    //   height="315"
+    //   src="https://www.youtube.com/embed/BxGHLVm1FR4?si=oslxBYJXo-8Dz9kj"
+    //   title="YouTube video player"
+    //   frameborder="0"
+    //   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    //   allowfullscreen
+    // ></iframe>
   );
 }

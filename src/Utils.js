@@ -1,3 +1,5 @@
+import { useIsMobile } from "./layout/MobileProvider";
+
 export function Highlight(props) {
   return (
     <span
@@ -57,6 +59,7 @@ export function BlackSolidHighlight(props) {
 }
 
 export function MidSize(props) {
+  const { isMobile } = useIsMobile();
   return (
     <span
       style={{
@@ -64,7 +67,7 @@ export function MidSize(props) {
         background: props.background,
       }}
     >
-      <h2 style={{ fontSize: 20 }}>{props.children}</h2>
+      <h2 style={{ fontSize: isMobile() ? 20 : 15 }}>{props.children}</h2>
     </span>
   );
 }

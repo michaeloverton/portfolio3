@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <Container
-        className="mt-5 mb-5"
+        className="mt-4 mb-5"
         style={{ color: "black", borderTop: "solid" }}
       >
         <Row>
@@ -23,7 +23,7 @@ export default function Home() {
         </Row>
       </Container>
 
-      <Container className="mt-4">&nbsp;</Container>
+      <Container className="mt-3">&nbsp;</Container>
     </div>
   );
 }

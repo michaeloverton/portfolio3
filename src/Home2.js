@@ -19,13 +19,7 @@ import "./layout/layout.css";
 import Header from "./Header";
 
 export default function Home2() {
-  const { isMobile, width } = useIsMobile();
-  const [hover, setHover] = useState(false);
-
-  // const scrollRef = useRef(null);
-  // const handleClick = () => {
-  //   scrollRef.current?.scrollIntoView({ behavior: "smooth" });
-  // };
+  const {isMobile}= useIsMobile();
 
   return (
     <AppWrapper>
@@ -35,7 +29,7 @@ export default function Home2() {
         <Container>
           <Header />
 
-          <Row className="mb-3">
+          <Row className={isMobile() ? "mb-3" : "mb-3"}>
             <Col>RECENT WORKS</Col>
             {/* <Col className="black-stripes" /> */}
           </Row>
@@ -46,7 +40,7 @@ export default function Home2() {
                 <Col>
                   <ProjectBanner
                     title="WE BECOME SOMETHING ELSE"
-                    imagePath="/images/projects/2023/phantoms/Michael-Overton-Brown-Embodiment1-Square.png"
+                    imagePath="/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-Square.png"
                     details="VR INTERACTIVE ANIMATION"
                     path="/we-become-something-else"
                   />
@@ -57,8 +51,9 @@ export default function Home2() {
                 <Col>
                   <ProjectBanner
                     title="PERFECT WORLD"
-                    imagePath="/images/projects/perfect-world/Perfect-World-Unity-Game-1.png"
+                    imagePath="/images/projects/perfect-world/Michael-Overton-Brown-Perfect-World-Unity-Game-1.png"
                     details="3D PLATFORMER ARTGAME"
+                    path="/perfect-world"
                   />
                 </Col>
               </Row>
@@ -84,6 +79,8 @@ export default function Home2() {
                     title="CORNHUB.NEWS"
                     imagePath="/images/projects/cornhub/Cornhub-1.png"
                     details="ANTI-WEBSITE"
+                    path="https://cornhub.news"
+                    external={true}
                   />
                 </Col>
                 <Col>
@@ -101,28 +98,17 @@ export default function Home2() {
                     title="SR388"
                     imagePath="/images/projects/music/Michael-Overton-Brown-SR388.png"
                     details="MUSIC"
+                    path="https://michaelovertonbrown.bandcamp.com/album/witness-sr-388"
+                    external={true}
                   />
                 </Col>
                 <Col></Col>
               </Row>
             </Col>
-
-            {/* <Col>
-              <Row
-                style={{ color: "black", border: "dashed" }}
-                className="mb-4 p-2"
-              >
-                <Col>
-                  MICHAEL IS A NEW MEDIA ARTIST, TECHNOLOGIST, AND INTERACTION
-                  DESIGNER CURRENTLY PURSUING AN MFA IN INTERACTIVE MEDIA AT THE
-                  UNIVERSITY OF SOUTHERN CALIFORNIA.
-                </Col>
-              </Row>
-            </Col> */}
           </Row>
-        </Container>
 
-        <Footer />
+          <Footer />
+        </Container>
       </Content>
     </AppWrapper>
   );
