@@ -346,8 +346,14 @@ export function ProjectPage(props) {
       </Row>
 
       <Row className={isMobile() ? "mt-2" : "mt-3"}>
-        <Col lg={props.descriptionImagePath ? 6 : 12} className={isMobile() ? "mb-2" : ""}>
-          <div style={{ border: "dashed", height: "100%" }} className="p-2 d-flex flex-column">
+        <Col
+          lg={props.descriptionImagePath ? 6 : 12}
+          className={isMobile() ? "mb-2" : ""}
+        >
+          <div
+            style={{ border: "dashed", height: "100%" }}
+            className="p-2 d-flex flex-column"
+          >
             <Row>
               <Col>
                 <BlackHighlight>DESCRIPTION:</BlackHighlight> {props.children}
@@ -381,7 +387,7 @@ export function ProjectPage(props) {
         </Row>
       ))}
 
-      {props.subImagePaths ? (
+      {props.subImagePaths && !isMobile() ? (
         <Row className={isMobile() ? "mt-2" : "mt-3"}>
           {props.subImagePaths.map((imagePath) => {
             return (
@@ -391,7 +397,19 @@ export function ProjectPage(props) {
             );
           })}
         </Row>
-      ) : null}
+      ) : (
+        <div>
+          {props.subImagePaths?.map((imagePath) => {
+            return (
+              <Row className={isMobile() ? "mt-2" : "mt-3"}>
+                <Col>
+                  <ModalImage path={imagePath} />
+                </Col>
+              </Row>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
