@@ -33,8 +33,8 @@ export default function Header() {
               <span className="header-name"> ←RETURN</span>
             </Link>
           ) : null}{" "}
-          <Link style={{ textDecoration: "none" }} to="/stream">
-            <span className="header-name">STREAM</span>
+          <Link style={{ textDecoration: "none" }} to="/images">
+            <span className="header-name">IMAGES</span>
           </Link>{" "}
           <Link style={{ textDecoration: "none" }} to="/about">
             <span className="header-name">ABOUT</span>

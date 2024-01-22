@@ -319,6 +319,7 @@ export function HomeContentBlock(props) {
 }
 
 export function ProjectPage(props) {
+  const [show, setShow] = useState(false);
   const { isMobile } = useIsMobile();
 
   return (
@@ -378,12 +379,23 @@ export function ProjectPage(props) {
           </Col>
         </Row>
       ))}
+
+      {props.subImagePaths ? (
+        <Row className={isMobile() ? "mt-2" : "mt-3"}>
+          {props.subImagePaths.map((imagePath) => {
+            return (
+              <Col>
+                <ModalImage path={imagePath} />
+              </Col>
+            );
+          })}
+        </Row>
+      ) : null}
     </div>
   );
 }
 
 export function ProjectBanner(props) {
-  const [hover, setHover] = useState(false);
   const { isMobile } = useIsMobile();
 
   return (
@@ -458,12 +470,15 @@ export function ModalImage(props) {
   const [show, setShow] = useState(false);
 
   return (
-    <div className={props.className} style={{ cursor: "pointer" }}>
+    <div
+      className={props.className}
+      style={{ cursor: "pointer", height: "100%" }}
+    >
       <Image
         onClick={() => setShow(true)}
         style={{
           height: props.height ? props.height : "100%",
-          width: "100%",
+          width: props.width ? props.width : "100%",
           objectFit: "cover",
         }}
         src={props.path}

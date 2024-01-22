@@ -7,6 +7,8 @@ import { Suspense } from "react";
 import Home2 from "./Home2";
 import WeBecomeSomethingElse from "./projects/WeBecomeSomethingElse";
 import PerfectWorld from "./projects/PerfectWorld";
+import Metastasis from "./projects/Metastasis";
+import Stream from "./Stream";
 
 const router = createBrowserRouter([
   // {
@@ -61,6 +63,28 @@ const router = createBrowserRouter([
           <GlassFlower />
         </Suspense> */}
         <PerfectWorld />
+      </div>
+    ),
+  },
+  {
+    path: "/metastasis",
+    element: (
+      <div style={{ height: "200vh" }}>
+        {/* <Suspense>
+          <GlassFlower />
+        </Suspense> */}
+        <Metastasis />
+      </div>
+    ),
+  },
+  {
+    path: "/images",
+    element: (
+      <div style={{ height: "200vh" }}>
+        {/* <Suspense>
+          <GlassFlower />
+        </Suspense> */}
+        <Stream />
       </div>
     ),
   },

@@ -64,6 +64,7 @@ export default function Home2() {
                     title="METASTASIS"
                     imagePath="/images/projects/metastasis/Metastasis-Unreal-Engine-Michael-Overton-Brown-1.png"
                     details="3D ANIMATION"
+                    path="/metastasis"
                   />
                 </Col>
               </Row>
