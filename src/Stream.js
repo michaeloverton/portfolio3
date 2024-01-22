@@ -16,16 +16,20 @@ export default function Stream() {
   }, []);
 
   const imagePaths = [
-    "/images/stream/thorns5.png",
-    "/images/stream/chaos1-design.png",
-    "/images/stream/pointflowers2.png",
-    "/images/stream/growth1.png",
-    "/images/stream/blobby1.png",
-    "/images/stream/handball.png",
-    "/images/stream/ai-blend-1.png",
-    "/images/stream/skeletal1.png",
-    "/images/stream/ai-blend-2.png",
-    "/images/stream/witness-ice.png"
+    "/images/stream/thorns5.webp",
+    "/images/stream/chaos1-design.webp",
+    "/images/stream/pointflowers2.webp",
+    "/images/stream/growth1.webp",
+    "/images/stream/ai-fps-1.png",
+    "/images/stream/ai-fps-2.png",
+    "/images/stream/ai-fps-3.png",
+    "/images/stream/ai-fps-4.png",
+    "/images/stream/blobby1.webp",
+    "/images/stream/handball.webp",
+    "/images/stream/ai-blend-1.webp",
+    "/images/stream/skeletal1.webp",
+    "/images/stream/ai-blend-2.webp",
+    "/images/stream/witness-ice.webp"
   ];
   const imagePerRow = isMobile() ? 2 : 3;
 

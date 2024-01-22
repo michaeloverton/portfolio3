@@ -20,17 +20,17 @@ export default function Metastasis() {
             title="METASTASIS"
             year={2023}
             technology="UNREAL ENGINE 5, HOUDINI, BLENDER, ABLETON LIVE"
-            bannerPath="/images/projects/metastasis/Metastasis-Unreal-Engine-Michael-Overton-Brown-4.png"
-            descriptionImagePath="/images/projects/metastasis/Metastasis-Unreal-Engine-Michael-Overton-Brown-2-Square.png"
+            bannerPath="/images/projects/metastasis/Metastasis-Unreal-Engine-Michael-Overton-Brown-4.webp"
+            descriptionImagePath="/images/projects/metastasis/Metastasis-Unreal-Engine-Michael-Overton-Brown-2-Square.webp"
             youtubeEmbedUrl="https://www.youtube.com/embed/_8Zmd9K7YzM?si=SzCYXmw1XAJOTAmA"
             primaryImagePaths={[
-              "/images/projects/metastasis/Metastasis-Unreal-Engine-Michael-Overton-Brown-5.png",
-              "/images/projects/metastasis/Metastasis-Unreal-Engine-Michael-Overton-Brown-1.png",
+              "/images/projects/metastasis/Metastasis-Unreal-Engine-Michael-Overton-Brown-5.webp",
+              "/images/projects/metastasis/Metastasis-Unreal-Engine-Michael-Overton-Brown-1.webp",
             ]}
             // subImagePaths={[
-            //   "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-6.png",
-            //   "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-9-Square.png",
-            //   "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-2.png",
+            //   "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-6.webp",
+            //   "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-9-Square.webp",
+            //   "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-2.webp",
             // ]}
           >
             Metaverse, metahuman, metastasis: humankind careens toward a future

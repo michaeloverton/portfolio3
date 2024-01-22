@@ -27,7 +27,7 @@ export default function About() {
             <Col lg={6} className={isMobile() ? "mb-2" : ""}>
               <ModalImage
                 size="md"
-                path="/images/about/Michael-Overton-Brown.jpg"
+                path="/images/about/Michael-Overton-Brown.webp"
               />
             </Col>
             <Col>

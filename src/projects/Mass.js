@@ -20,18 +20,18 @@ export default function Mass() {
             title="MASS"
             year={2022}
             technology="UNITY, BLENDER, FMOD"
-            bannerPath="/images/projects/mass/Mass-Unity-Game-1.png"
-            descriptionImagePath="/images/projects/mass/Mass-Unity-Game-3-Square.png"
+            bannerPath="/images/projects/mass/Mass-Unity-Game-1.webp"
+            descriptionImagePath="/images/projects/mass/Mass-Unity-Game-3-Square.webp"
             youtubeEmbedUrl="https://www.youtube.com/embed/lagvz8v3sBE?si=EEhkTi_dgwgQZ4ql"
             primaryImagePaths={[
-              "/images/projects/mass/Mass-Unity-Game-4.png",
-              "/images/projects/mass/Mass-Unity-Game-2.png",
-              // "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-4.png",
+              "/images/projects/mass/Mass-Unity-Game-4.webp",
+              "/images/projects/mass/Mass-Unity-Game-2.webp",
+              // "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-4.webp",
             ]}
             // subImagePaths={[
-            //   "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-6.png",
-            //   "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-9-Square.png",
-            //   "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-2.png",
+            //   "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-6.webp",
+            //   "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-9-Square.webp",
+            //   "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-2.webp",
             // ]}
           >
             MASS is a Catholicism-inflected body horror music space "game" for

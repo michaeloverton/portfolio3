@@ -40,7 +40,7 @@ export default function Home2() {
                 <Col>
                   <ProjectBanner
                     title="WE BECOME SOMETHING ELSE"
-                    imagePath="/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-Square.png"
+                    imagePath="/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-Square.webp"
                     details="VR INTERACTIVE ANIMATION"
                     path="/we-become-something-else"
                   />
@@ -51,7 +51,7 @@ export default function Home2() {
                 <Col>
                   <ProjectBanner
                     title="PERFECT WORLD"
-                    imagePath="/images/projects/perfect-world/Michael-Overton-Brown-Perfect-World-Unity-Game-1.png"
+                    imagePath="/images/projects/perfect-world/Michael-Overton-Brown-Perfect-World-Unity-Game-1.webp"
                     details="3D PLATFORMER ARTGAME"
                     path="/perfect-world"
                   />
@@ -62,7 +62,7 @@ export default function Home2() {
                 <Col>
                   <ProjectBanner
                     title="METASTASIS"
-                    imagePath="/images/projects/metastasis/Metastasis-Unreal-Engine-Michael-Overton-Brown-1.png"
+                    imagePath="/images/projects/metastasis/Metastasis-Unreal-Engine-Michael-Overton-Brown-1.webp"
                     details="3D ANIMATION"
                     path="/metastasis"
                   />
@@ -87,7 +87,7 @@ export default function Home2() {
                 <Col>
                   <ProjectBanner
                     title="DOUBLE/STAR"
-                    imagePath="/images/projects/double-star/Double-Star-Unreal-Engine.png"
+                    imagePath="/images/projects/double-star/Double-Star-Unreal-Engine.webp"
                     details="EXPERIMENTAL EXPLORATION GAME"
                     path="/double-star"
                   />
@@ -107,7 +107,7 @@ export default function Home2() {
                 <Col>
                   <ProjectBanner
                     title="MASS"
-                    imagePath="/images/projects/mass/Mass-Unity-Game-1.png"
+                    imagePath="/images/projects/mass/Mass-Unity-Game-1.webp"
                     details="INTERACTIVE MUSIC SPACE"
                     path="/mass"
                   />

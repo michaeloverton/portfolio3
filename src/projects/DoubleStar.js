@@ -20,19 +20,19 @@ export default function DoubleStar() {
             title="DOUBLE/STAR"
             year={2023}
             technology="UNREAL ENGINE 5, HOUDINI, BLENDER, FMOD"
-            bannerPath="/images/projects/double-star/Double-Star-Unreal-Engine-4.png"
-            // descriptionImagePath="/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-Square.png"
+            bannerPath="/images/projects/double-star/Double-Star-Unreal-Engine-4.webp"
+            // descriptionImagePath="/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-Square.webp"
             youtubeEmbedUrl="https://www.youtube.com/embed/-QjuqbvksTw?si=AEfW5n1SgdhkoTKf"
             primaryImagePaths={[
-              "/images/projects/double-star/Double-Star-Unreal-Engine-1.png",
-              "/images/projects/double-star/Double-Star-Unreal-Engine-5.png",
-              "/images/projects/double-star/Double-Star-Unreal-Engine-2.png",
-              // "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-4.png",
+              "/images/projects/double-star/Double-Star-Unreal-Engine-1.webp",
+              "/images/projects/double-star/Double-Star-Unreal-Engine-5.webp",
+              "/images/projects/double-star/Double-Star-Unreal-Engine-2.webp",
+              // "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-4.webp",
             ]}
             // subImagePaths={[
-            //   "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-6.png",
-            //   "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-9-Square.png",
-            //   "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-2.png",
+            //   "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-6.webp",
+            //   "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-9-Square.webp",
+            //   "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-2.webp",
             // ]}
           >
             DOUBLE/STAR is an adaptation of Robert Heinlein's book of the same

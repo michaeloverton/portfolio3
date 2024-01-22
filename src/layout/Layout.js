@@ -347,13 +347,13 @@ export function ProjectPage(props) {
 
       <Row className={isMobile() ? "mt-2" : "mt-3"}>
         <Col lg={props.descriptionImagePath ? 6 : 12} className={isMobile() ? "mb-2" : ""}>
-          <div style={{ border: "dashed", height: "100%" }} className="p-2">
+          <div style={{ border: "dashed", height: "100%" }} className="p-2 d-flex flex-column">
             <Row>
               <Col>
                 <BlackHighlight>DESCRIPTION:</BlackHighlight> {props.children}
               </Col>
             </Row>
-            <Row className="mt-3">
+            <Row className="mt-auto">
               <Col>
                 <BlackHighlight>TECHNOLOGY:</BlackHighlight> {props.technology}
               </Col>
