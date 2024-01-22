@@ -346,7 +346,7 @@ export function ProjectPage(props) {
       </Row>
 
       <Row className={isMobile() ? "mt-2" : "mt-3"}>
-        <Col lg={6} className={isMobile() ? "mb-2" : ""}>
+        <Col lg={props.descriptionImagePath ? 6 : 12} className={isMobile() ? "mb-2" : ""}>
           <div style={{ border: "dashed", height: "100%" }} className="p-2">
             <Row>
               <Col>
@@ -360,10 +360,11 @@ export function ProjectPage(props) {
             </Row>
           </div>
         </Col>
-
-        <Col>
-          <ModalImage path={props.descriptionImagePath} />
-        </Col>
+        {props.descriptionImagePath ? (
+          <Col>
+            <ModalImage path={props.descriptionImagePath} />
+          </Col>
+        ) : null}
       </Row>
 
       <Row className={isMobile() ? "mt-2" : "mt-3"}>

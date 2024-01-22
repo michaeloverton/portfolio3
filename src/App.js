@@ -9,6 +9,8 @@ import WeBecomeSomethingElse from "./projects/WeBecomeSomethingElse";
 import PerfectWorld from "./projects/PerfectWorld";
 import Metastasis from "./projects/Metastasis";
 import Stream from "./Stream";
+import DoubleStar from "./projects/DoubleStar";
+import Mass from "./projects/Mass";
 
 const router = createBrowserRouter([
   // {
@@ -74,6 +76,28 @@ const router = createBrowserRouter([
           <GlassFlower />
         </Suspense> */}
         <Metastasis />
+      </div>
+    ),
+  },
+  {
+    path: "/double-star",
+    element: (
+      <div style={{ height: "200vh" }}>
+        {/* <Suspense>
+          <GlassFlower />
+        </Suspense> */}
+        <DoubleStar />
+      </div>
+    ),
+  },
+  {
+    path: "/mass",
+    element: (
+      <div style={{ height: "200vh" }}>
+        {/* <Suspense>
+          <GlassFlower />
+        </Suspense> */}
+        <Mass />
       </div>
     ),
   },

@@ -78,7 +78,7 @@ export default function Home2() {
                 <Col>
                   <ProjectBanner
                     title="CORNHUB.NEWS"
-                    imagePath="/images/projects/cornhub/Cornhub-1.png"
+                    imagePath="/images/projects/cornhub/Cornhub-2.png"
                     details="ANTI-WEBSITE"
                     path="https://cornhub.news"
                     external={true}
@@ -86,9 +86,10 @@ export default function Home2() {
                 </Col>
                 <Col>
                   <ProjectBanner
-                    title="DOUBLE STAR"
+                    title="DOUBLE/STAR"
                     imagePath="/images/projects/double-star/Double-Star-Unreal-Engine.png"
                     details="EXPERIMENTAL EXPLORATION GAME"
+                    path="/double-star"
                   />
                 </Col>
               </Row>
@@ -103,7 +104,14 @@ export default function Home2() {
                     external={true}
                   />
                 </Col>
-                <Col></Col>
+                <Col>
+                  <ProjectBanner
+                    title="MASS"
+                    imagePath="/images/projects/mass/Mass-Unity-Game-1.png"
+                    details="INTERACTIVE MUSIC SPACE"
+                    path="/mass"
+                  />
+                </Col>
               </Row>
             </Col>
           </Row>
