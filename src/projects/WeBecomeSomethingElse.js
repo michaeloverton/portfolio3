@@ -26,6 +26,8 @@ export default function WeBecomeSomethingElse() {
             primaryImagePaths={[
               "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-12.webp",
               "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-8.webp",
+              "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-13.png",
+              "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-14.png",
               "/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-4.webp",
             ]}
             subImagePaths={[
