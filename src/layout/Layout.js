@@ -373,11 +373,19 @@ export function ProjectPage(props) {
         ) : null}
       </Row>
 
-      <Row className={isMobile() ? "mt-2" : "mt-3"}>
+      {props.youtubeUrls.map((youtubeUrl) => (
+        <Row className={isMobile() ? "mt-2" : "mt-3"}>
+          <Col>
+            <YoutubeVideo url={youtubeUrl} />
+          </Col>
+        </Row>
+      ))}
+
+      {/* <Row className={isMobile() ? "mt-2" : "mt-3"}>
         <Col>
           <YoutubeVideo url={props.youtubeEmbedUrl} title={props.title} />
         </Col>
-      </Row>
+      </Row> */}
 
       {props.primaryImagePaths.map((imagePath) => (
         <Row className={isMobile() ? "mt-2" : "mt-3"}>

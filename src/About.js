@@ -64,8 +64,68 @@ export default function About() {
                   </Col>
                 </Row>
                 <Row>
+                  <Col><span className="header-name">EMAIL</span>: M.OVERTONBROWN AT GMAIL.COM</Col>
+                </Row>
+              </div>
+            </Col>
+          </Row>
+
+          <Row className={isMobile() ? "mt-2" : "mt-3"}>
+            <Col className={isMobile() ? "mb-2" : ""}>
+              <div>
+                <Row>
+                  <Col>ARTIST STATEMENT</Col>
+                </Row>
+                <Row className="mt-3">
                   <Col>
-                    EMAIL: M.OVERTONBROWN AT GMAIL.COM
+                    My practice stems from a fascination
+                    with systems and our inability to truly know them. Every
+                    day, each of us engages with myriad social, economic, and
+                    technological systems, but do we really understand them? So
+                    too for computers, which largely mediate our digitized,
+                    systemic world: can a single person truly comprehend the
+                    mechanics of these machines in their entirety? As I write
+                    code, do I understand the compiled binary? Do I know where
+                    my code exists in a computer chip? Do I know how the physics
+                    of silicon allows my code to be executed? In the complexity
+                    of modern computers, we have created systems that are
+                    theoretically fully comprehensible, but practically
+                    incomprehensible for a single person. In their complexity,
+                    computers and machines take on an unexpected life of their
+                    own. They can surprise us, intrigue us, and delight us. They
+                    can be our co-creators.
+                  </Col>
+                </Row>
+
+                <Row className="mt-3">
+                  <Col>
+                    In my work, I use game engines, procedural tools, and
+                    interactivity to form a relationship with computers and
+                    machines. I approach my work experimentally: I design
+                    systems, structures, and networks with large possibility
+                    spaces, and I probe this possibility space for intriguing,
+                    emotional, or unexpected results. I surf the machine. This
+                    oscillation between technical design and experimental
+                    discovery creates an oscillation between my conscious and
+                    subconscious selves. Rapidly and subconsciously modulating
+                    the machine is a kind of technological automatism and forces
+                    me to ask myself: “Why was that permutation resonant?” By
+                    creating and exploring a system of sufficient complexity,
+                    the machine can teach us about ourselves.
+                  </Col>
+                </Row>
+                <Row className="mt-3 mb-3">
+                  <Col>
+                    There is also a comfort here: as a bulwark against the
+                    infinite regression of unknowability of our modern world,
+                    these systems provide an oasis of controlled
+                    unpredictability. Despite not grasping the full capacity of
+                    the systems that I create, I can at least understand the
+                    boundaries of the design space. For me, this provides a
+                    degree of relief and certainty in an increasingly uncertain
+                    world. I want my work to provide a safe haven and controlled
+                    environment from which we can look out and explore questions
+                    about the systems of our world.
                   </Col>
                 </Row>
               </div>

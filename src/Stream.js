@@ -16,9 +16,10 @@ export default function Stream() {
   }, []);
 
   const imagePaths = [
+    "/images/stream/glassShrooms.webp",
     "/images/stream/thorns5.webp",
     "/images/stream/chaos1-design.webp",
-    "/images/stream/pointflowers2.webp",
+    "/images/stream/pointflowers6.jpg",
     "/images/stream/growth1.webp",
     "/images/stream/ai-fps-1.png",
     "/images/stream/ai-fps-2.png",
