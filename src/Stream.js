@@ -7,6 +7,7 @@ import Header from "./Header";
 import { Row, Col } from "react-bootstrap";
 import { useIsMobile } from "./layout/MobileProvider";
 import { ModalImage } from "./layout/Layout";
+import { BlackHighlight } from "./Utils";
 
 export default function Stream() {
   const { isMobile } = useIsMobile();
@@ -55,7 +56,7 @@ export default function Stream() {
           <Header />
 
           <Row className={isMobile() ? "mb-3" : "mb-3"}>
-            <Col>MISCELLANEOUS IMAGES, EXPERIMENTS, PROCESS</Col>
+            <Col><BlackHighlight className="px-3">MISCELLANEOUS IMAGES, EXPERIMENTS, PROCESS</BlackHighlight></Col>
             {/* <Col className="black-stripes" /> */}
           </Row>
 

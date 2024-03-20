@@ -22,7 +22,9 @@ export default function Mass() {
             technology="UNITY, BLENDER, FMOD"
             bannerPath="/images/projects/mass/Mass-Unity-Game-1.webp"
             descriptionImagePath="/images/projects/mass/Mass-Unity-Game-3-Square.webp"
-            youtubeEmbedUrl="https://www.youtube.com/embed/lagvz8v3sBE?si=EEhkTi_dgwgQZ4ql"
+            youtubeUrls={[
+              "https://www.youtube.com/embed/lagvz8v3sBE?si=EEhkTi_dgwgQZ4ql",
+            ]}
             primaryImagePaths={[
               "/images/projects/mass/Mass-Unity-Game-4.webp",
               "/images/projects/mass/Mass-Unity-Game-2.webp",

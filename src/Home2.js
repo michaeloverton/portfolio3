@@ -30,7 +30,7 @@ export default function Home2() {
           <Header />
 
           <Row className={isMobile() ? "mb-3" : "mb-3"}>
-            <Col>RECENT WORKS</Col>
+            <Col><BlackHighlight className="px-3">RECENT WORKS</BlackHighlight></Col>
             {/* <Col className="black-stripes" /> */}
           </Row>
 
@@ -70,7 +70,7 @@ export default function Home2() {
               </Row>
 
               <Row className="mb-3">
-                <Col lg={3}>OLDER WORKS</Col>
+                <Col lg={3}><BlackHighlight className="px-3">OLDER WORKS</BlackHighlight></Col>
                 {/* <Col className="black-stripes" /> */}
               </Row>
 

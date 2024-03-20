@@ -74,7 +74,7 @@ export default function About() {
             <Col className={isMobile() ? "mb-2" : ""}>
               <div>
                 <Row>
-                  <Col>ARTIST STATEMENT</Col>
+                  <Col><BlackHighlight className="px-3">ARTIST STATEMENT</BlackHighlight></Col>
                 </Row>
                 <Row className="mt-3">
                   <Col>

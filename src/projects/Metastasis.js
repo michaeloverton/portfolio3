@@ -22,7 +22,9 @@ export default function Metastasis() {
             technology="UNREAL ENGINE 5, HOUDINI, BLENDER, ABLETON LIVE"
             bannerPath="/images/projects/metastasis/Metastasis-Unreal-Engine-Michael-Overton-Brown-4.webp"
             descriptionImagePath="/images/projects/metastasis/Metastasis-Unreal-Engine-Michael-Overton-Brown-2-Square.webp"
-            youtubeEmbedUrl="https://www.youtube.com/embed/_8Zmd9K7YzM?si=SzCYXmw1XAJOTAmA"
+            youtubeUrls={[
+              "https://www.youtube.com/embed/_8Zmd9K7YzM?si=SzCYXmw1XAJOTAmA",
+            ]}
             primaryImagePaths={[
               "/images/projects/metastasis/Metastasis-Unreal-Engine-Michael-Overton-Brown-5.webp",
               "/images/projects/metastasis/Metastasis-Unreal-Engine-Michael-Overton-Brown-1.webp",

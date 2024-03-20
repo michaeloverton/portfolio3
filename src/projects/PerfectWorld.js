@@ -17,11 +17,13 @@ export default function PerfectWorld() {
           <Header />
 
           <ProjectPage
-            title="WE BECOME SOMETHING ELSE"
+            title="PERFECT WORLD"
             technology="UNITY, HOUDINI, BLENDER, FMOD"
             bannerPath="/images/projects/perfect-world/TitleCard.webp"
             descriptionImagePath="/images/projects/perfect-world/Michael-Overton-Brown-Perfect-World-Unity-Game-8-Square.webp"
-            youtubeEmbedUrl="https://www.youtube.com/embed/DlQM8Fm4ubw?si=4fal8jb4Zzayjhww"
+            youtubeUrls={[
+              "https://www.youtube.com/embed/DlQM8Fm4ubw?si=4fal8jb4Zzayjhww",
+            ]}
             primaryImagePaths={[
               "/images/projects/perfect-world/Michael-Overton-Brown-Perfect-World-Unity-Game-12.webp",
               "/images/projects/perfect-world/Michael-Overton-Brown-Perfect-World-Unity-Game-3.webp",

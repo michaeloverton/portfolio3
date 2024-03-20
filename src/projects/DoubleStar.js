@@ -22,7 +22,9 @@ export default function DoubleStar() {
             technology="UNREAL ENGINE 5, HOUDINI, BLENDER, FMOD"
             bannerPath="/images/projects/double-star/Double-Star-Unreal-Engine-4.webp"
             // descriptionImagePath="/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-Square.webp"
-            youtubeEmbedUrl="https://www.youtube.com/embed/-QjuqbvksTw?si=AEfW5n1SgdhkoTKf"
+            youtubeUrls={[
+              "https://www.youtube.com/embed/-QjuqbvksTw?si=AEfW5n1SgdhkoTKf",
+            ]}
             primaryImagePaths={[
               "/images/projects/double-star/Double-Star-Unreal-Engine-1.webp",
               "/images/projects/double-star/Double-Star-Unreal-Engine-5.webp",
