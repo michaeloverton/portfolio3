@@ -19,7 +19,7 @@ import "./layout/layout.css";
 import Header from "./Header";
 
 export default function Home2() {
-  const {isMobile}= useIsMobile();
+  const { isMobile } = useIsMobile();
 
   return (
     <AppWrapper>
@@ -30,7 +30,9 @@ export default function Home2() {
           <Header />
 
           <Row className={isMobile() ? "mb-3" : "mb-3"}>
-            <Col><BlackHighlight className="px-3">RECENT WORKS</BlackHighlight></Col>
+            <Col>
+              <BlackHighlight className="px-3">RECENT WORKS</BlackHighlight>
+            </Col>
             {/* <Col className="black-stripes" /> */}
           </Row>
 
@@ -54,6 +56,12 @@ export default function Home2() {
                     imagePath="/images/projects/perfect-world/Michael-Overton-Brown-Perfect-World-Unity-Game-1.webp"
                     details="3D PLATFORMER ARTGAME"
                     path="/perfect-world"
+                    image={
+                      <Image
+                        width={isMobile() ? 60 : 100}
+                        src="/images/laurels/Perfect-World-Amaze-White.png"
+                      />
+                    }
                   />
                 </Col>
               </Row>
@@ -65,54 +73,114 @@ export default function Home2() {
                     imagePath="/images/projects/metastasis/Metastasis-Unreal-Engine-Michael-Overton-Brown-1.webp"
                     details="3D ANIMATION"
                     path="/metastasis"
+                    image={
+                      <Image
+                        width={isMobile() ? 100 : 150}
+                        src="/images/laurels/WaveForms2023.png"
+                      />
+                    }
                   />
                 </Col>
               </Row>
 
               <Row className="mb-3">
-                <Col lg={3}><BlackHighlight className="px-3">OLDER WORKS</BlackHighlight></Col>
+                <Col lg={3}>
+                  <BlackHighlight className="px-3">OLDER WORKS</BlackHighlight>
+                </Col>
                 {/* <Col className="black-stripes" /> */}
               </Row>
 
-              <Row>
-                <Col>
-                  <ProjectBanner
-                    title="CORNHUB.NEWS"
-                    imagePath="/images/projects/cornhub/Cornhub-2.png"
-                    details="ANTI-WEBSITE"
-                    path="https://cornhub.news"
-                    external={true}
-                  />
-                </Col>
-                <Col>
-                  <ProjectBanner
-                    title="DOUBLE/STAR"
-                    imagePath="/images/projects/double-star/Double-Star-Unreal-Engine.webp"
-                    details="EXPERIMENTAL EXPLORATION GAME"
-                    path="/double-star"
-                  />
-                </Col>
-              </Row>
+              {!isMobile() ? (
+                <div>
+                  <Row>
+                    <Col>
+                      <ProjectBanner
+                        title="CORNHUB.NEWS"
+                        imagePath="/images/projects/cornhub/Cornhub-2.png"
+                        details="ANTI-WEBSITE"
+                        path="https://cornhub.news"
+                        external={true}
+                      />
+                    </Col>
+                    <Col>
+                      <ProjectBanner
+                        title="DOUBLE/STAR"
+                        imagePath="/images/projects/double-star/Double-Star-Unreal-Engine.webp"
+                        details="EXPERIMENTAL EXPLORATION GAME"
+                        path="/double-star"
+                      />
+                    </Col>
+                  </Row>
 
-              <Row>
-                <Col>
-                  <ProjectBanner
-                    title="SR388"
-                    imagePath="/images/projects/music/Michael-Overton-Brown-SR388.png"
-                    details="MUSIC"
-                    path="https://michaelovertonbrown.bandcamp.com/album/witness-sr-388"
-                    external={true}
-                  />
-                </Col>
-                <Col>
-                  <ProjectBanner
-                    title="MASS"
-                    imagePath="/images/projects/mass/Mass-Unity-Game-1.webp"
-                    details="INTERACTIVE MUSIC SPACE"
-                    path="/mass"
-                  />
-                </Col>
-              </Row>
+                  <Row>
+                    <Col>
+                      <ProjectBanner
+                        title="SR388"
+                        imagePath="/images/projects/music/Michael-Overton-Brown-SR388.png"
+                        details="MUSIC"
+                        path="https://michaelovertonbrown.bandcamp.com/album/witness-sr-388"
+                        external={true}
+                      />
+                    </Col>
+                    <Col>
+                      <ProjectBanner
+                        title="MASS"
+                        imagePath="/images/projects/mass/Mass-Unity-Game-1.webp"
+                        details="INTERACTIVE MUSIC SPACE"
+                        path="/mass"
+                      />
+                    </Col>
+                  </Row>
+                </div>
+              ) : (
+                <div>
+                  <Row>
+                    <Col>
+                      <ProjectBanner
+                        title="CORNHUB.NEWS"
+                        imagePath="/images/projects/cornhub/Cornhub-2.png"
+                        details="ANTI-WEBSITE"
+                        path="https://cornhub.news"
+                        external={true}
+                      />
+                    </Col>
+                  </Row>
+
+                  <Row>
+                    <Col>
+                      <ProjectBanner
+                        title="DOUBLE/STAR"
+                        imagePath="/images/projects/double-star/Double-Star-Unreal-Engine.webp"
+                        details="EXPERIMENTAL EXPLORATION GAME"
+                        path="/double-star"
+                      />
+                    </Col>
+                  </Row>
+
+                  <Row>
+                    <Col>
+                      <ProjectBanner
+                        title="SR388"
+                        imagePath="/images/projects/music/Michael-Overton-Brown-SR388.png"
+                        details="MUSIC"
+                        path="https://michaelovertonbrown.bandcamp.com/album/witness-sr-388"
+                        external={true}
+                      />
+                    </Col>
+                  </Row>
+
+                  <Row>
+                    <Col>
+                      <ProjectBanner
+                        title="MASS"
+                        imagePath="/images/projects/mass/Mass-Unity-Game-1.webp"
+                        details="INTERACTIVE MUSIC SPACE"
+                        path="/mass"
+                      />
+                    </Col>
+                  </Row>
+                </div>
+              )}
             </Col>
           </Row>
 

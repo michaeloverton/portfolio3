@@ -341,7 +341,7 @@ export function ProjectPage(props) {
 
       <Row>
         <Col>
-          <ModalImage height="300px" path={props.bannerPath} />
+          <ModalImage path={props.bannerPath} />
         </Col>
       </Row>
 
@@ -364,6 +364,19 @@ export function ProjectPage(props) {
                 <BlackHighlight>TECHNOLOGY:</BlackHighlight> {props.technology}
               </Col>
             </Row>
+            {props.link ? (
+              <Row className="mt-1">
+                <Col>
+                  <Link
+                    style={{ textDecoration: "none", fontSize: 23 }}
+                    to={props.link}
+                    target={"_blank"}
+                  >
+                    <span className="header-name">DOWNLOAD</span>
+                  </Link>
+                </Col>
+              </Row>
+            ) : null}
           </div>
         </Col>
         {props.descriptionImagePath ? (
@@ -462,6 +475,7 @@ export function ProjectBanner(props) {
                 {props.title}
               </span>
             </Col>
+            {props.image ? <Col className="text-end">{props.image}</Col> : null}
           </Row>
 
           {props.details ? (

@@ -21,11 +21,12 @@ export default function DoubleStar() {
             year={2023}
             technology="UNREAL ENGINE 5, HOUDINI, BLENDER, FMOD"
             bannerPath="/images/projects/double-star/Double-Star-Unreal-Engine-4.webp"
-            // descriptionImagePath="/images/projects/we-become-something-else/Michael-Overton-Brown-Embodiment1-Square.webp"
+            descriptionImagePath="/images/projects/double-star/Double-Star-Unreal-Engine-Square.webp"
             youtubeUrls={[
               "https://www.youtube.com/embed/-QjuqbvksTw?si=AEfW5n1SgdhkoTKf",
             ]}
             primaryImagePaths={[
+              "/images/projects/double-star/Double-Star-Unreal-Engine-3.webp",
               "/images/projects/double-star/Double-Star-Unreal-Engine-1.webp",
               "/images/projects/double-star/Double-Star-Unreal-Engine-5.webp",
               "/images/projects/double-star/Double-Star-Unreal-Engine-2.webp",

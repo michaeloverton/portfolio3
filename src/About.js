@@ -64,6 +64,17 @@ export default function About() {
                   </Col>
                 </Row>
                 <Row>
+                  <Col>
+                    <Link
+                      style={{ textDecoration: "none" }}
+                      to="https://www.linkedin.com/in/michael-overton-brown/"
+                      target="_blank"
+                    >
+                      <span className="header-name">LINKEDIN</span>
+                    </Link>{" "}
+                  </Col>
+                </Row>
+                <Row>
                   <Col><span className="header-name">EMAIL</span>: M.OVERTONBROWN AT GMAIL.COM</Col>
                 </Row>
               </div>
